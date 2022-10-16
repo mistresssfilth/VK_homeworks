@@ -26,12 +26,12 @@ public class Library {
     }
     private Author getAuthorByName(String name){
         for(Author author : authors){
-            if (author.equals(name))
+            if (author.getName().equals(name))
                 return author;
         }
         return null;
     }
-    private void booksFromJson(){
+    public void booksFromJson(){
         try {
             InputStreamReader reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream("books.json"));
             gson = gsonBuilder.create();
@@ -42,7 +42,7 @@ public class Library {
         }
 
     }
-    private void authorsFromJson(){
+    public void authorsFromJson(){
         try {
             InputStreamReader reader = new InputStreamReader(getClass().getClassLoader().getResourceAsStream("authors.json"));
             gson = gsonBuilder.create();
