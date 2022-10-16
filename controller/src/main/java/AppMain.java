@@ -7,8 +7,6 @@ public class AppMain {
         String authorName = scanner.nextLine();
         LibFactory libFactory = new LibFactory();
         Library library = libFactory.create();
-        library.booksFromJson();
-        library.authorsFromJson();
         library.getBooksByAuthor(authorName);
     }
 }
