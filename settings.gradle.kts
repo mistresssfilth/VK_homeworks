@@ -1,3 +1,3 @@
-rootProject.name = "VK_Homeworks"
+rootProject.name = "library"
 include("controller")
 include("models")
